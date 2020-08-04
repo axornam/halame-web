@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="font.awesome/css/all.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+
+  <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-messaging.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-storage.js"></script>
+  <script type='text/javascript' src="scripts/config.js"></script>
+
+  <title>HalaMe Web</title>
+</head>
+
+<body>
+  <!-- This is the NavBar For the Chat page -->
+  <div id="message-container" class="main-wrapper">
+    <header class="header">
+      <img class="brand" src="./bg/hala me.png" alt="brand">
+      <div class="logo"><a href="#">HalaMe</a></div>
+      <div class="menu">
+        <a id="log_out">LogOut&nbsp;<i class="fas fa-sign-out-alt"></i></a>
+      </div>
+    </header>
+
+    <!-- This is the maing page that contains the chat area and the message input field -->
+    <div class="flex-box">
+      <!-- This is the page for displaying signed up users of the application -->
+      <div class="box-1">
+        <div class="heading">
+          <i class="fab fa-google">&nbsp<span>People</span></i>
+        </div>
+        <!-- Users will displayed here -->
+        <div id="userItem" class="users">
+          <!-- display of dynamic users -->
+          <!-- <div class="user">
+            <div class="user-image"></div>
+            <div class="user-details"></div>
+          </div> -->
+        </div>
+        <!-- displaying users will end here -->
+      </div>
+
+
+      <!-- This is the division for the chat container -->
+      <div class="box-2">
+        <!-- This box will contain both chats from the sender and reciever -->
+        <div class="chat-container">
+
+          <div class="heading">
+            <i class="fas fa-user"> &nbsp;<span class="name"></span></i>
+          </div>
+
+          <div class="messages">
+
+            <div class="chats">
+              <div class="message-container">
+                <!-- This is sent message block
+                <div class="message-block">
+                  <div class="user-icon"></div>
+                  <div class="message">Hi, Govardhan hhow are you..?</div>
+                </div>
+
+                 This is the block of recieved
+                <div class="message-block received-message" style="">
+                  <div class="user-icon"></div>
+                  <div class="message">Hi, Govardhan hhow are you..?</div>
+                </div> -->
+              </div>
+            </div>
+
+            <!-- This container contains the input field and the send and upload button for file upload -->
+            <div class="write-message">
+              <div class="message-area">
+                <!-- This is the button for placing an emoji -->
+                <button id="emoji-btn" class="send-btn">
+                  <i class="fa fa-smile">&nbsp;</i>
+                </button>
+
+                <!-- This is the input field -->
+                <input type="text" name="" id="input-field" cols="30" rows="10" class="message-input"
+                  placeholder="Type Your Message Here"></input>
+
+                <!-- This is a nifty trick to hide a file upload button -->
+                <input type="file" id="selectedFile" style="display: none;" />
+                <button id="upload-btn" class="upload-btn" type="button"
+                  onclick="document.getElementById('selectedFile').click();"><i class="fa fa-file-upload"></i></button>
+                <!-- The nifty trick ends here -->
+
+                <!-- This is the button for sending the messages typed into the field -->
+                <button id="send-btn" class="send-btn">
+                  <i class="fab fa-telegram-plane">&nbsp;</i>
+                </button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Included Scripts for handlig page events -->
+  <script src="./js/jquery-3.4.1.js"></script>
+  <script src="./scripts/message_handler.js"></script>
+</body>
+
+</html>
