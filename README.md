@@ -7,3 +7,6 @@ Halaweb  is a web-based messaging application build using HTML, CSS3, bootstrap,
 3. Copy the project sdk config details into halame config.js
 4. Build and deploy the project to firebase hosting
 5. open the provided url to view the app live
+
+# Check It Out
+https://halame-f5fe2.web.app
